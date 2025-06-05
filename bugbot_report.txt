@@ -1,0 +1,975 @@
+BugBot Detailed Report
+============================================================
+
+[CRITICAL] SQL_INJECTION_RISK
+File: ./bugbot_analysis.py:236
+Description: Potential SQL injection - use parameterized queries
+----------------------------------------
+[HIGH] EVAL_USAGE
+File: ./bugbot_analysis.py:213
+Description: Use of eval() is dangerous
+----------------------------------------
+[HIGH] EXEC_USAGE
+File: ./bugbot_analysis.py:214
+Description: Use of exec() without sandboxing
+----------------------------------------
+[HIGH] SHELL_TRUE
+File: ./bugbot_analysis.py:215
+Description: subprocess with shell=True is dangerous
+----------------------------------------
+[HIGH] DYNAMIC_IMPORT
+File: ./bugbot_analysis.py:217
+Description: Dynamic imports can be dangerous
+----------------------------------------
+[HIGH] SHELL_TRUE
+File: ./sources/tools/BashInterpreter.py:54
+Description: subprocess with shell=True is dangerous
+----------------------------------------
+[HIGH] EXEC_USAGE
+File: ./sources/tools/PyInterpreter.py:41
+Description: Use of exec() without sandboxing
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./bugbot_analysis.py:348
+Description: # Bugs (HIGH/MEDIUM)
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./sources/speech_to_text.py:103
+Description: # TODO find a better way to do this
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./sources/text_to_speech.py:110
+Description: #TODO find a better way, we would like to have the TTS not be annoying, speak only useful informations
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./sources/text_to_speech.py:161
+Description: # TODO add info message for cn2an, jieba chinese related import
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./sources/tools/searxSearch.py:29
+Description: # TODO find a better way
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./sources/tools/searxSearch.py:53
+Description: # TODO Make it asyncromous or smth
+----------------------------------------
+[INFO] TODO_COMMENT
+File: ./sources/tools/webSearch.py:53
+Description: # TODO Make it asyncromous or smth
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:29
+Description: Magic number 6379 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:29
+Description: Magic number 6379 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:37
+Description: Magic number 3000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:199
+Description: Magic number 429 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:209
+Description: Magic number 400 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:217
+Description: Magic number 400 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./api.py:250
+Description: Magic number 8000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./bugbot_analysis.py:149
+Description: Magic number 20 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./bugbot_analysis.py:150
+Description: Magic number 20 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./bugbot_analysis.py:206
+Description: Magic number 30 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./bugbot_analysis.py:290
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./bugbot_analysis.py:295
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./bugbot_analysis.py:393
+Description: Magic number 40 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./llm_server/app.py:29
+Description: Magic number 401 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./llm_server/app.py:33
+Description: Magic number 202 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./llm_server/app.py:34
+Description: Magic number 402 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./llm_server/app.py:41
+Description: Magic number 403 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./llm_server/app.py:48
+Description: Magic number 405 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./llm_server/sources/llamacpp_handler.py:22
+Description: Magic number 4096 should be a named constant
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/agents/agent.py:120
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/agent.py:251
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/agent.py:253
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/browser_agent.py:170
+Description: Magic number 77 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/browser_agent.py:276
+Description: Magic number 79 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/browser_agent.py:280
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/browser_agent.py:349
+Description: Magic number 16 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/agents/browser_agent.py:364
+Description: Magic number 32 should be a named constant
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/agents/planner_agent.py:282
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:38
+Description: Magic number 86 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:65
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:65
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:65
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:65
+Description: Magic number 125 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:65
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:66
+Description: Magic number 14 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:66
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:66
+Description: Magic number 125 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:66
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:67
+Description: Magic number 11 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:67
+Description: Magic number 86 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:67
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:67
+Description: Magic number 125 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:67
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:84
+Description: Magic number 115 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:128
+Description: Magic number 1920 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:128
+Description: Magic number 1080 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:158
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:158
+Description: Magic number 86 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:238
+Description: Magic number 150 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:238
+Description: Magic number 1200 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:242
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:242
+Description: Magic number 300 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:318
+Description: Magic number 32768 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:342
+Description: Magic number 72 should be a named constant
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/browser.py:413
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/browser.py:454
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:673
+Description: Magic number 75 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:702
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:709
+Description: Magic number 123 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/browser.py:709
+Description: Magic number 123 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/interaction.py:108
+Description: Magic number 033 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/interaction.py:108
+Description: Magic number 35 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/interaction.py:108
+Description: Magic number 033 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/language.py:42
+Description: Magic number 639 should be a named constant
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/language.py:95
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/language.py:112
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:18
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:18
+Description: Magic number 5000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:95
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/llm_provider.py:146
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:155
+Description: Magic number 11434 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:196
+Description: Magic number 1024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:244
+Description: Magic number 1024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:333
+Description: Magic number 4096 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:418
+Description: Magic number 32 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/llm_provider.py:418
+Description: Magic number 8080 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:22
+Description: Magic number 14 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:58
+Description: Magic number 4096 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:196
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:201
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:212
+Description: Magic number 512 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:238
+Description: Magic number 1024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/memory.py:275
+Description: Magic number 52 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:82
+Description: Magic number 2024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:102
+Description: Magic number 2023 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:113
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:126
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:129
+Description: Magic number 2024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:160
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:168
+Description: Magic number 2024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:188
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:215
+Description: Magic number 4090 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:225
+Description: Magic number 2023 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:231
+Description: Magic number 2024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:236
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:265
+Description: Magic number 032025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:267
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:301
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:319
+Description: Magic number 2025 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:320
+Description: Magic number 2024 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:347
+Description: Magic number 4090 should be a named constant
+----------------------------------------
+[LOW] REDUNDANT_EXCEPTION_RAISE
+File: ./sources/router.py:462
+Description: Catching and immediately re-raising exception without logging
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:516
+Description: Magic number 4090 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:517
+Description: Magic number 4090 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/router.py:518
+Description: Magic number 4090 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/schemas.py:75
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/schemas.py:77
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:19
+Description: Magic number 16 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:19
+Description: Magic number 4096 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:19
+Description: Magic number 8192 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:48
+Description: Magic number 16 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:74
+Description: Magic number 16 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:74
+Description: Magic number 32 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:88
+Description: Magic number 20 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:109
+Description: Magic number 16000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:111
+Description: Magic number 32 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:112
+Description: Magic number 32 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:115
+Description: Magic number 16000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/speech_to_text.py:116
+Description: Magic number 16000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:74
+Description: Magic number 24000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:75
+Description: Magic number 24000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:137
+Description: Magic number 00 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:137
+Description: Magic number 08 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:137
+Description: Magic number 300 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:137
+Description: Magic number 3010 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:137
+Description: Magic number 201 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/text_to_speech.py:147
+Description: Magic number 00 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/BashInterpreter.py:35
+Description: Magic number 300 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/BashInterpreter.py:122
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/C_Interpreter.py:56
+Description: Magic number 120 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/GoInterpreter.py:39
+Description: Magic number 111 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/JavaInterpreter.py:123
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/JavaInterpreter.py:178
+Description: Magic number 400 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/JavaInterpreter.py:178
+Description: Magic number 400 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/flightSearch.py:83
+Description: Magic number 123 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/mcpFinder.py:44
+Description: Magic number 5000 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:20
+Description: Magic number 11 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:20
+Description: Magic number 86 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:20
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:20
+Description: Magic number 134 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:20
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:33
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:33
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:33
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:44
+Description: Magic number 403 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:45
+Description: Magic number 403 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:115
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/searxSearch.py:115
+Description: Magic number 8080 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:33
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:33
+Description: Magic number 64 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:33
+Description: Magic number 537 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:44
+Description: Magic number 403 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:45
+Description: Magic number 403 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:74
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/tools/webSearch.py:83
+Description: Magic number 50 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./sources/utility.py:61
+Description: Magic number 120 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_browser_agent_parsing.py:19
+Description: Magic number 15 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_browser_agent_parsing.py:23
+Description: Magic number 15 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_browser_agent_parsing.py:34
+Description: Magic number 123 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_browser_agent_parsing.py:37
+Description: Magic number 123 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:15
+Description: Magic number 32 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:28
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:29
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:30
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:30
+Description: Magic number 8080 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:40
+Description: Magic number 74 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:41
+Description: Magic number 74 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:42
+Description: Magic number 74 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:43
+Description: Magic number 74 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:44
+Description: Magic number 74 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:45
+Description: Magic number 74 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_provider.py:64
+Description: Magic number 142 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_searx_search.py:14
+Description: Magic number 127 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_searx_search.py:14
+Description: Magic number 8080 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_tools_parsing.py:34
+Description: Magic number 42 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_tools_parsing.py:42
+Description: Magic number 42 should be a named constant
+----------------------------------------
+[LOW] MAGIC_NUMBER
+File: ./tests/test_tools_parsing.py:128
+Description: Magic number 42 should be a named constant
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:50
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:60
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:82
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:94
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:109
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:124
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:126
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:148
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:188
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:189
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:190
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:191
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:197
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:223
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:244
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:280
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:286
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:306
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./bugbot_analysis.py:319
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_INFINITE_LOOP
+File: ./llm_server/sources/ollama_handler.py:59
+Description: while True without obvious break condition
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/agents/agent.py:263
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] BARE_EXCEPT
+File: ./sources/agents/planner_agent.py:92
+Description: Bare except clause catches all exceptions (including SystemExit)
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/browser.py:212
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/browser.py:225
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/browser.py:461
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/browser.py:468
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/interaction.py:134
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/memory.py:211
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:36
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:45
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:51
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:57
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:157
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:167
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:170
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:174
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:182
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/speech_to_text.py:184
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/BashInterpreter.py:29
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/BashInterpreter.py:80
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/C_Interpreter.py:35
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/C_Interpreter.py:79
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/GoInterpreter.py:80
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/JavaInterpreter.py:77
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/PyInterpreter.py:52
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/PyInterpreter.py:66
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/fileFinder.py:139
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/searxSearch.py:71
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/tools.py:186
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/tools/tools.py:205
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./sources/utility.py:101
+Description: Possible string concatenation with non-string
+----------------------------------------
+[MEDIUM] POTENTIAL_TYPE_ERROR
+File: ./tests/test_tools_parsing.py:190
+Description: Possible string concatenation with non-string
+----------------------------------------
