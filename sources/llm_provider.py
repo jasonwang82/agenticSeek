@@ -29,6 +29,7 @@ class Provider:
             "huggingface": self.huggingface_fn,
             "google": self.google_fn,
             "deepseek": self.deepseek_fn,
+            "deepseek-api": self.deepseek_api_fn,
             "together": self.together_fn,
             "dsk_deepseek": self.dsk_deepseek,
             "openrouter": self.openrouter_fn,
@@ -36,7 +37,7 @@ class Provider:
         }
         self.logger = Logger("provider.log")
         self.api_key = None
-        self.unsafe_providers = ["openai", "deepseek", "dsk_deepseek", "together", "google", "openrouter"]
+        self.unsafe_providers = ["openai", "deepseek", "deepseek-api", "dsk_deepseek", "together", "google", "openrouter"]
         if self.provider_name not in self.available_providers:
             raise ValueError(f"Unknown provider: {provider_name}")
         if self.provider_name in self.unsafe_providers and self.is_local == False:
@@ -319,6 +320,29 @@ class Provider:
             return thought
         except Exception as e:
             raise Exception(f"Deepseek API error: {str(e)}") from e
+
+    def deepseek_api_fn(self, history, verbose=False):
+        """
+        Use DeepSeek API to generate text with configurable model.
+        This is an alias for the deepseek provider that allows model configuration.
+        """
+        client = OpenAI(api_key=self.api_key, base_url="https://api.deepseek.com")
+        if self.is_local:
+            raise Exception("DeepSeek API is not available for local use. Change config.ini")
+        try:
+            # Use the model specified in config, defaulting to deepseek-chat if not specified
+            model = self.model if self.model else "deepseek-chat"
+            response = client.chat.completions.create(
+                model=model,
+                messages=history,
+                stream=False
+            )
+            thought = response.choices[0].message.content
+            if verbose:
+                print(thought)
+            return thought
+        except Exception as e:
+            raise Exception(f"DeepSeek API error: {str(e)}") from e
 
     def lm_studio_fn(self, history, verbose=False):
         """
