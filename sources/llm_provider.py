@@ -29,6 +29,7 @@ class Provider:
             "huggingface": self.huggingface_fn,
             "google": self.google_fn,
             "deepseek": self.deepseek_fn,
+            "deepseek-api": self.deepseek_fn,
             "together": self.together_fn,
             "dsk_deepseek": self.dsk_deepseek,
             "openrouter": self.openrouter_fn,
@@ -36,7 +37,7 @@ class Provider:
         }
         self.logger = Logger("provider.log")
         self.api_key = None
-        self.unsafe_providers = ["openai", "deepseek", "dsk_deepseek", "together", "google", "openrouter"]
+        self.unsafe_providers = ["openai", "deepseek", "deepseek-api", "dsk_deepseek", "together", "google", "openrouter"]
         if self.provider_name not in self.available_providers:
             raise ValueError(f"Unknown provider: {provider_name}")
         if self.provider_name in self.unsafe_providers and self.is_local == False:
@@ -50,7 +51,12 @@ class Provider:
 
     def get_api_key(self, provider):
         load_dotenv()
-        api_key_var = f"{provider.upper()}_API_KEY"
+        provider_lower = provider.lower()
+        provider_to_env = {
+            "deepseek": "DEEPSEEK_API_KEY",
+            "deepseek-api": "DEEPSEEK_API_KEY",
+        }
+        api_key_var = provider_to_env.get(provider_lower, f"{provider.upper()}_API_KEY")
         api_key = os.getenv(api_key_var)
         if not api_key:
             pretty_print(f"API key {api_key_var} not found in .env file. Please add it", color="warning")
@@ -309,7 +315,7 @@ class Provider:
             raise Exception("Deepseek (API) is not available for local use. Change config.ini")
         try:
             response = client.chat.completions.create(
-                model="deepseek-chat",
+                model=self.model,
                 messages=history,
                 stream=False
             )
@@ -392,17 +398,16 @@ class Provider:
                 if chunk['type'] == 'text':
                     thought += chunk['content']
             return thought
-        except AuthenticationError:
+        except AuthenticationError as e:
             raise AuthenticationError("Authentication failed. Please check your token.") from e
-        except RateLimitError:
+        except RateLimitError as e:
             raise RateLimitError("Rate limit exceeded. Please wait before making more requests.") from e
         except CloudflareError as e:
             raise CloudflareError(f"Cloudflare protection encountered: {str(e)}") from e
-        except NetworkError:
+        except NetworkError as e:
             raise NetworkError("Network error occurred. Check your internet connection.") from e
         except APIError as e:
             raise APIError(f"API error occurred: {str(e)}") from e
-        return None
 
     def test_fn(self, history, verbose=True):
         """
